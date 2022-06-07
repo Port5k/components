@@ -1,0 +1,31 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 1s;
+}
+
+body p {
+    font-family: "Space Mono", monospace;
+    font-weight: 700;
+    width: 72px;
+    color: #303030;
+    text-align: center;
+}
+
+.hex_wrapper {
+    padding: 1rem;
+    background: transparent;
+    width: 100%;
+    font-size: 32px;
+    color: #303030;
+}
