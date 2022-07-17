@@ -1,36 +1,35 @@
-let myScreen = document.querySelector('.screen')
+let screen = document.querySelector('.screen')
 
-myScreen.textContent = 0;
+let screenValue = 0;
 
-let myScreenValue = Number(myScreen.textContent);
-
-function add() {
-    myScreen.textContent = myScreenValue++;
-}
-
-function subtract() {
-    myScreen.textContent = myScreenValue--;
-}
-
-function statusColor() {
-    if (myScreenValue > 0)
-        myScreen.setAttribute('class', 'positive');
-    else if (myScreenValue < 0)
-        myScreen.setAttribute('class', 'negative');
-    else if (myScreenValue == 0)
-        myScreen.setAttribute('class', 'neutral');
-}
+screen.textContent = screenValue;
 
 Array.from(document.querySelectorAll('button')).forEach((e) => {
     e.addEventListener('click', () => {
         if (e.classList.contains('button_add')) {
             add();
-            console.log('first')
         } else if (e.classList.contains('button_subtract')) {
             subtract();
-            console.log('www')
         }
-
         statusColor();
     })
 })
+
+function add() {
+    screenValue++;
+    screen.textContent = screenValue;
+}
+
+function subtract() {
+    screenValue--;
+    screen.textContent = screenValue;
+}
+
+function statusColor() {
+    if (screenValue > 0)
+        screen.setAttribute('class', 'positive screen');
+    else if (screenValue < 0)
+        screen.setAttribute('class', 'negative screen');
+    else if (screenValue == 0)
+        screen.setAttribute('class', 'neutral screen');
+}
